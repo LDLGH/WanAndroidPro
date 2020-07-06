@@ -1,0 +1,98 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+    defaultConfig {
+        applicationId "com.ldl.wanandroidpro"
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        renderscriptSupportModeEnabled true    // Enable RS support
+        renderscriptTargetApi rootProject.renderscriptTargetApi
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    dataBinding {
+        enabled true
+    }
+}
+
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "androidx.appcompat:appcompat:$androidXVersion"
+    implementation "androidx.core:core-ktx:$coreKtxVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintlayoutVersion"
+    implementation "com.google.android.material:material:$androidXVersion"
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:$swiperefreshlayoutVersion"
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation "androidx.fragment:fragment-ktx:$fragment_version"
+    implementation "androidx.activity:activity-ktx:$activity_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle"
+    implementation "androidx.room:room-runtime:$room_version"
+    implementation "androidx.room:room-ktx:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+
+    implementation "com.jakewharton.rxbinding3:rxbinding:$rxbindingVersion"
+    implementation "com.jakewharton.rxbinding3:rxbinding-core:$rxbindingVersion"
+    implementation "com.jakewharton.rxbinding3:rxbinding-appcompat:$rxbindingVersion"
+    implementation "com.jakewharton.rxbinding3:rxbinding-drawerlayout:$rxbindingVersion"
+    implementation "com.jakewharton.rxbinding3:rxbinding-leanback:$rxbindingVersion"
+    implementation "com.jakewharton.rxbinding3:rxbinding-recyclerview:$rxbindingVersion"
+    implementation "com.jakewharton.rxbinding3:rxbinding-slidingpanelayout:$rxbindingVersion"
+    implementation "com.jakewharton.rxbinding3:rxbinding-swiperefreshlayout:$rxbindingVersion"
+    implementation "com.jakewharton.rxbinding3:rxbinding-viewpager:$rxbindingVersion"
+    implementation "com.jakewharton.rxbinding3:rxbinding-viewpager2:$rxbindingVersion"
+    implementation "com.jakewharton.rxbinding3:rxbinding-material:$rxbindingVersion"
+
+    implementation "com.ljx.rxhttp:rxhttp:$rxhttpVersion"
+    kapt "com.ljx.rxhttp:rxhttp-compiler:$rxhttpVersion"
+    implementation "com.ljx.rxlife:rxlife-coroutine:$rxlife"
+    implementation "com.squareup.okhttp3:okhttp:$okhttpVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttpVersion"
+    implementation "io.reactivex.rxjava2:rxjava:$rxjava"
+    implementation "com.github.tbruyelle:rxpermissions:$rxpermissions"
+    implementation "com.blankj:rxbus:$rxbus"
+
+    implementation "com.blankj:utilcodex:$utilcodeXVersion"
+    implementation "com.billy.android:gloading:$gloadingVersion"
+    implementation "com.airbnb.android:lottie:$lottie"
+    implementation "de.hdodenhof:circleimageview:$circleimageview"
+    implementation "com.github.CymChad:BaseRecyclerViewAdapterHelper:$adapterHelper"
+    implementation "com.hyman:flowlayout-lib:$flowlayout"
+    implementation "com.github.zhpanvip:BannerViewPager:$BannerViewPager"
+    implementation "com.lxj:xpopup:$xpopup"
+    implementation "com.github.bumptech.glide:glide:$glide"
+    kapt "com.github.bumptech.glide:compiler:$glide"
+    implementation "jp.wasabeef:glide-transformations:$glide_transformations"
+    implementation "com.just.agentweb:agentweb:$agentweb"
+
+}

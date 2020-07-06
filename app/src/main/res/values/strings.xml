@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">WanAndroidPro</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="http_error">网络异常</string>
+    <string name="unKnown_error">未知错误</string>
+
+    //login
+    <string name="register_account">注册账号</string>
+    <string name="username">用户名</string>
+    <string name="password">密码</string>
+    <string name="create_account">创建账号</string>
+    <string name="or">或</string>
+    <string name="login">登录</string>
+    <string name="login_success">登录成功</string>
+    <string name="login_fail">登录失败</string>
+    <string name="register_fail">注册失败</string>
+    <string name="input_username">请输入用户名</string>
+    <string name="password_limit">密码错误不能少于6个字符</string>
+
+    //navigation
+    <string name="login_or_register">登录或创建帐号</string>
+    <string name="setting">设置</string>
+    <string name="about_us">关于我们</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <string name="logout">退出登录</string>
+
+    <string name="menu_main">首页</string>
+    <string name="menu_article">文章</string>
+    <string name="menu_knowledge">知识体系</string>
+    <string name="menu_wx">公众号</string>
+    <string name="menu_navigation">导航</string>
+    <string name="menu_project">项目</string>
+
+    //net
+    <string name="click_to_retry">点击重试</string>
+
+    //homepage
+    <string name="search">搜索</string>
+    <string name="back">返回</string>
+    <string name="see_more">查看更多</string>
+    <string name="recommended_article">推荐文章</string>
+    <string name="carefully_selected_for_you">为你精挑细选</string>
+    <string name="hot_search">热搜</string>
+    <string name="discover_more">发现更多干货</string>
+    <string name="useful_sites">常用网站</string>
+    <string name="website_collection">大神网站合集</string>
+    <string name="login_collect_articles">登录即可收藏文章</string>
+    <string name="more_website">更多网站</string>
+    <string name="login_immediately">立即登录</string>
+    <string name="hot_search_list">热搜榜</string>
+    <string name="hot">HOT</string>
+    <string name="history_record">历史记录</string>
+    <string name="have_bottom_line">我是有底线的</string>
+    <string name="collect">收藏</string>
+    <string name="failed_to_obtain_article_list">获取文章列表数据失败</string>
+    <string name="skip">跳过</string>
+    <string name="tips">温馨提示</string>
+    <string name="confirm_logout">确认退出登录？</string>
+    <string name="yes">确认</string>
+    <string name="no">取消</string>
+
+    <string name="slash">/</string>
+</resources>
