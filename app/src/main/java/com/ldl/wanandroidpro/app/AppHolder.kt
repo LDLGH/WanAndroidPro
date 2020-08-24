@@ -3,7 +3,13 @@ package com.ldl.wanandroidpro.app
 import android.app.Application
 import com.billy.android.loading.Gloading
 import com.blankj.utilcode.util.Utils
+import com.ldl.wanandroidpro.di.repositoryModule
+import com.ldl.wanandroidpro.di.viewModelModule
 import com.ldl.wanandroidpro.ui.main.adapter.GlobalAdapter
+import org.koin.android.ext.koin.androidContext
+import org.koin.android.ext.koin.androidLogger
+import org.koin.core.context.startKoin
+import org.koin.core.logger.Level
 import rxhttp.RxHttpPlugins
 import rxhttp.wrapper.cahce.CacheMode
 import rxhttp.wrapper.param.RxHttp
@@ -27,9 +33,18 @@ class AppHolder : Application() {
             CacheMode.REQUEST_NETWORK_FAILED_READ_CACHE
         )
         initGloading()
+        initKoin()
     }
 
     private fun initGloading() {
         Gloading.initDefault(GlobalAdapter())
+    }
+
+    private fun initKoin() {
+        startKoin {
+            androidLogger(Level.DEBUG)
+            androidContext(this@AppHolder)
+            modules(viewModelModule, repositoryModule)
+        }
     }
 }

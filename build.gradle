@@ -68,5 +68,5 @@ ext {
     glide_transformations = '4.1.0'
 
     room_version = '2.2.5'
-
+    koin_version = '2.1.6'
 }

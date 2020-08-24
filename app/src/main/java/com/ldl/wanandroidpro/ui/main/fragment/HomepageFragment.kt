@@ -2,12 +2,10 @@ package com.ldl.wanandroidpro.ui.main.fragment
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.viewpager2.widget.ViewPager2
 import com.blankj.utilcode.util.ConvertUtils
 import com.ldl.wanandroidpro.R
 import com.ldl.wanandroidpro.base.fragment.BaseRootFragment
@@ -27,6 +25,7 @@ import com.zhpan.bannerview.constants.PageStyle
 import com.zhpan.indicator.enums.IndicatorSlideMode
 import com.zhpan.indicator.enums.IndicatorStyle
 import kotlinx.android.synthetic.main.fragment_homepage.*
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 /**
  * 作者：LDL 创建时间：2020/5/25
@@ -34,7 +33,7 @@ import kotlinx.android.synthetic.main.fragment_homepage.*
  */
 class HomepageFragment : BaseRootFragment<FragmentHomepageBinding>() {
 
-    private val viewModel by viewModels<HomepageViewModel>()
+    private val viewModel by viewModel<HomepageViewModel>()
     private lateinit var mAdapter: HomepageAdapter
     private var mBanner: BannerViewPager<BannerData, BannerViewHolder>? = null
 
@@ -105,6 +104,7 @@ class HomepageFragment : BaseRootFragment<FragmentHomepageBinding>() {
     }
 
     override fun reload() {
+        showLoading()
         viewModel.getAllData()
     }
 

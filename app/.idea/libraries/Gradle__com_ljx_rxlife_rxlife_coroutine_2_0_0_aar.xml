@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.ljx.rxlife:rxlife-coroutine:2.0.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b2c3e6b383b85310f10b7cacbae68ca6/rxlife-coroutine-2.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b2c3e6b383b85310f10b7cacbae68ca6/rxlife-coroutine-2.0.0/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.ljx.rxlife/rxlife-coroutine/2.0.0/5346e4782b7d4717295972df2babf2cb3f090193/rxlife-coroutine-2.0.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.ljx.rxlife/rxlife-coroutine/2.0.0/13874286cd8ec2634266237e9492166b773bbdc7/rxlife-coroutine-2.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

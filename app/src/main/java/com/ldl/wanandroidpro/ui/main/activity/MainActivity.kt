@@ -4,7 +4,6 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.activity.viewModels
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AlertDialog
 import androidx.core.view.GravityCompat
@@ -25,6 +24,7 @@ import com.ldl.wanandroidpro.viewmodel.main.MainViewModel
 import jp.wasabeef.glide.transformations.BlurTransformation
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 /**
  * 作者：LDL 创建时间：2020/5/20
@@ -32,7 +32,7 @@ import kotlinx.android.synthetic.main.content_main.*
  */
 class MainActivity : BaseActivity<ActivityMainBinding>() {
 
-    private val viewModel by viewModels<MainViewModel>()
+    private val viewModel by viewModel<MainViewModel>()
 
     private val mFragments by lazy {
         arrayListOf<Fragment>()

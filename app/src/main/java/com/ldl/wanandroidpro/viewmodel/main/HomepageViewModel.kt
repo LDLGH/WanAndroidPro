@@ -19,9 +19,7 @@ import com.ldl.wanandroidpro.viewmodel.main.repository.HomepageRepository
  * 作者：LDL 创建时间：2020/5/25
  * 类说明：
  */
-class HomepageViewModel : BaseViewModel() {
-
-    private val mRepository by lazy { HomepageRepository() }
+class HomepageViewModel(private val mRepository: HomepageRepository) : BaseViewModel() {
 
     private val feedArticleDataList by lazy {
         arrayListOf<FeedArticleData>()
@@ -95,7 +93,7 @@ class HomepageViewModel : BaseViewModel() {
             homepageMultiData.add(hotData)
             homepageMultiData.add(usefulData)
 
-            if(!DataManager.getLoginStatus()){
+            if (!DataManager.getLoginStatus()) {
                 val loginData = HomepageMultiData(
                     HomepageMultiData.LOGIN,
                     StringUtils.getString(R.string.login_immediately),
